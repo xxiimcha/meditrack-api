@@ -1,0 +1,101 @@
+ID,Age,Gender,Condition,Medication,Dosage
+1,69,Female,Hypertension,Amlodipine,5-10 mg/day
+2,20,Male,Arthritis,Ibuprofen,200-800 mg/day
+3,46,Female,Stroke,Aspirin,81-325 mg/day
+4,61,Female,Diabetes Complications,Metformin,500-2000 mg/day
+5,29,Female,Arthritis,Paracetamol,500-1000 mg/day
+6,23,Male,Stroke,Clopidogrel,75 mg/day
+7,21,Female,Stroke,Clopidogrel,75 mg/day
+8,56,Male,Arthritis,Paracetamol,500-1000 mg/day
+9,66,Female,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+10,27,Male,Arthritis,Ibuprofen,200-800 mg/day
+11,66,Female,Hypertension,Amlodipine,5-10 mg/day
+12,30,Male,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+13,28,Female,Hypertension,Losartan,50-100 mg/day
+14,76,Male,Stroke,Aspirin,81-325 mg/day
+15,27,Male,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+16,48,Female,Hypertension,Amlodipine,5-10 mg/day
+17,35,Female,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+18,65,Female,Hypertension,Losartan,50-100 mg/day
+19,39,Female,Hypertension,Losartan,50-100 mg/day
+20,62,Female,Arthritis,Ibuprofen,200-800 mg/day
+21,27,Male,Diabetes Complications,Metformin,500-2000 mg/day
+22,26,Male,Arthritis,Paracetamol,500-1000 mg/day
+23,74,Female,Hypertension,Losartan,50-100 mg/day
+24,31,Male,Stroke,Aspirin,81-325 mg/day
+25,27,Female,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+26,90,Male,Arthritis,Ibuprofen,200-800 mg/day
+27,70,Female,Diabetes Complications,Insulin,10-50 units/day
+28,67,Male,Arthritis,Ibuprofen,200-800 mg/day
+29,51,Male,Diabetes Complications,Insulin,10-50 units/day
+30,29,Male,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+31,78,Male,Arthritis,Paracetamol,500-1000 mg/day
+32,63,Male,Hypertension,Amlodipine,5-10 mg/day
+33,84,Female,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+34,34,Female,Arthritis,Paracetamol,500-1000 mg/day
+35,29,Female,Diabetes Complications,Metformin,500-2000 mg/day
+36,18,Female,Diabetes Complications,Insulin,10-50 units/day
+37,33,Male,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+38,83,Female,Stroke,Clopidogrel,75 mg/day
+39,74,Female,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+40,76,Female,Stroke,Aspirin,81-325 mg/day
+41,39,Female,Arthritis,Ibuprofen,200-800 mg/day
+42,74,Female,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+43,49,Male,Stroke,Aspirin,81-325 mg/day
+44,40,Male,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+45,36,Female,Arthritis,Ibuprofen,200-800 mg/day
+46,33,Female,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+47,73,Male,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+48,46,Male,Hypertension,Amlodipine,5-10 mg/day
+49,69,Female,Diabetes Complications,Metformin,500-2000 mg/day
+50,37,Male,Hypertension,Amlodipine,5-10 mg/day
+51,30,Male,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+52,90,Male,Stroke,Aspirin,81-325 mg/day
+53,86,Female,Diabetes Complications,Metformin,500-2000 mg/day
+54,83,Male,Stroke,Aspirin,81-325 mg/day
+55,28,Female,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+56,77,Female,Diabetes Complications,Metformin,500-2000 mg/day
+57,27,Female,Diabetes Complications,Insulin,10-50 units/day
+58,47,Male,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+59,23,Female,Diabetes Complications,Insulin,10-50 units/day
+60,84,Female,Arthritis,Paracetamol,500-1000 mg/day
+61,86,Male,Hypertension,Amlodipine,5-10 mg/day
+62,43,Male,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+63,89,Male,Stroke,Aspirin,81-325 mg/day
+64,49,Male,Hypertension,Losartan,50-100 mg/day
+65,65,Female,Hypertension,Amlodipine,5-10 mg/day
+66,89,Male,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+67,88,Female,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+68,45,Male,Hypertension,Losartan,50-100 mg/day
+69,79,Female,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+70,19,Female,Diabetes Complications,Insulin,10-50 units/day
+71,20,Female,Arthritis,Ibuprofen,200-800 mg/day
+72,24,Female,Diabetes Complications,Insulin,10-50 units/day
+73,47,Female,Stroke,Clopidogrel,75 mg/day
+74,20,Female,Diabetes Complications,Insulin,10-50 units/day
+75,24,Male,Hypertension,Amlodipine,5-10 mg/day
+76,88,Female,Diabetes Complications,Metformin,500-2000 mg/day
+77,52,Female,Hypertension,Amlodipine,5-10 mg/day
+78,21,Female,Hypertension,Losartan,50-100 mg/day
+79,68,Female,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+80,21,Male,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+81,75,Male,Stroke,Aspirin,81-325 mg/day
+82,26,Male,Diabetes Complications,Insulin,10-50 units/day
+83,69,Female,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+84,38,Male,Diabetes Complications,Metformin,500-2000 mg/day
+85,85,Male,Diabetes Complications,Insulin,10-50 units/day
+86,42,Male,Hypertension,Losartan,50-100 mg/day
+87,51,Female,Stroke,Aspirin,81-325 mg/day
+88,45,Female,Chronic Kidney Disease,Erythropoietin,50-100 units/kg/week
+89,81,Female,Hypertension,Losartan,50-100 mg/day
+90,43,Male,Hypertension,Amlodipine,5-10 mg/day
+91,59,Female,Stroke,Aspirin,81-325 mg/day
+92,52,Female,Hypertension,Losartan,50-100 mg/day
+93,30,Female,Chronic Kidney Disease,Calcium Acetate,1334 mg/day
+94,88,Female,Hypertension,Losartan,50-100 mg/day
+95,55,Female,Arthritis,Ibuprofen,200-800 mg/day
+96,34,Female,Stroke,Aspirin,81-325 mg/day
+97,31,Female,Hypertension,Losartan,50-100 mg/day
+98,87,Male,Arthritis,Ibuprofen,200-800 mg/day
+99,26,Male,Hypertension,Losartan,50-100 mg/day
+100,24,Female,Arthritis,Ibuprofen,200-800 mg/day
