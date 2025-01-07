@@ -24,26 +24,48 @@ for col in ['Gender', 'Condition', 'Medication']:
 # Check for missing values
 df = df.dropna()
 
-# Display processed data
-print("Processed Data:\n", df.head())
+# Convert Dosage to numeric values by extracting the lower bound of the range
+def preprocess_dosage(dosage):
+    if isinstance(dosage, str):
+        # Extract the lower bound from the range (e.g., '5-10 mg/day' → 5)
+        numeric_part = dosage.split('-')[0].strip()  # Get the part before '-'
+        numeric_part = ''.join(filter(str.isdigit, numeric_part))  # Extract only digits
+        if numeric_part.isdigit():
+            return int(numeric_part)
+        else:
+            print(f"Warning: Could not process dosage value '{dosage}'")  # Log unprocessed values
+            return 0
+    elif isinstance(dosage, (int, float)):
+        return int(dosage)  # Handle numeric values
+    else:
+        print(f"Warning: Unknown format for dosage value '{dosage}'")  # Log unknown formats
+        return 0  # Default to 0 for unprocessed values
+
+df['Dosage'] = df['Dosage'].apply(preprocess_dosage)
+
+# Check if Dosage is being classified correctly
+print("Processed Dosage Column:\n", df['Dosage'].value_counts())
+
+# Convert Dosage to Binary Classification
+# 0 = missed, 1 = taken
+df['Dosage'] = df['Dosage'].apply(lambda x: 1 if x > 0 else 0)
 
 # 3. Define Features and Target
-# Features: Age, Gender, Condition, Medication, Dosage
-X = df.drop(columns=['Dosage'])  # Assuming Dosage is target; replace with adherence column if available
-y = df['Dosage']  # Replace with actual target variable
-
-# Optional: Convert Dosage into categories for adherence (e.g., On-time, Missed, Delayed)
-# y = pd.cut(y, bins=[0, 100, 500, 10000], labels=['On-time', 'Missed', 'Delayed'])
+# Features: Age, Gender, Condition, Medication
+features = df.drop(columns=['Dosage'])  # Features
+target_adherence = df['Dosage']  # Binary target (0: missed, 1: taken)
 
 # 4. Train-Test Split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+features_train, features_test, target_train, target_test = train_test_split(
+    features, target_adherence, test_size=0.2, random_state=42
+)
 
 # 5. Train Random Forest Model
-rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
-rf_model.fit(X_train, y_train)
+adherence_model = RandomForestClassifier(n_estimators=100, random_state=42)
+adherence_model.fit(features_train, target_train)
 
 # 6. Save the Model
-joblib.dump(rf_model, 'medication_adherence_model.pkl')
+joblib.dump(adherence_model, 'medication_adherence_model.pkl')
 print("Model saved as 'medication_adherence_model.pkl'")
 
 # 7. Flask API for Predictions
@@ -56,8 +78,8 @@ def predict():
     input_data = pd.DataFrame([data])
     
     # Define features to match training data
-    features = ['Age', 'Gender', 'Condition', 'Medication']  # Adjust based on your columns
-    input_data = input_data[features]
+    feature_columns = ['Age', 'Gender', 'Condition', 'Medication']  # Adjust based on your columns
+    input_data = input_data[feature_columns]
     
     # Make prediction
     prediction = model.predict(input_data)
@@ -65,7 +87,7 @@ def predict():
     # Add medication name to response
     medication_name = data.get('Medication_Name', 'Unknown')  # Optionally send Medication_Name in request
     return jsonify({
-        'adherence_prediction': prediction[0],
+        'adherence_prediction': int(prediction[0]),  # Convert prediction to int for JSON serialization
         'medication_name': medication_name
     })
 
@@ -76,13 +98,13 @@ def predict_all():
 
     for record in data:
         input_data = pd.DataFrame([record])  # Convert to DataFrame
-        features = ['Age', 'Gender', 'Condition', 'Medication']  # Match features
-        input_data = input_data[features]
+        feature_columns = ['Age', 'Gender', 'Condition', 'Medication']  # Match features
+        input_data = input_data[feature_columns]
         adherence = model.predict(input_data)[0]
 
         predictions.append({
             'Medication_Name': record.get('Medication_Name', 'Unknown'),
-            'Adherence': adherence
+            'Adherence': int(adherence)  # Convert prediction to int
         })
     return jsonify(predictions)
 
